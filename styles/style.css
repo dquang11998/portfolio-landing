@@ -1,0 +1,122 @@
+:root {
+  --bg: #f7fbff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #2563eb;
+  --gap: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(2, 6, 23, 0.06);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.03);
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 12px var(--gap);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.brand-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.brand-title {
+  font-size: 1.05rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Nav */
+.main-nav ul {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+.main-nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+.main-nav a:hover,
+.main-nav a:focus {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--accent);
+  outline: none;
+}
+.nav-cta {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.12);
+}
+.nav-cta:hover {
+  transform: translateY(-1px);
+}
+
+/* small screens: stack nav */
+@media (max-width: 760px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .brand-title {
+    font-size: 1rem;
+  }
+}
